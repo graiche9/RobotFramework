@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-03-25T15:09:06.263430" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Avec Template Data" source="c:\Users\zouzo\Desktop\project-selenium-robotframework\robotframework_saucedemo\tests\login_avec_template_data.robot">
+<test id="s1-t1" name="Case 1" line="10">
+<kw name="executer apres chaque test" type="SETUP">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>bye apres chaque test</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-25T15:09:06.654113" elapsed="0.000702"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-25T15:09:06.655339" level="INFO">Opening browser 'chrome' to base url 'http://www.saucedemo.com/' through remote server at 'http://127.0.0.1:4444/wd/hub'.</msg>
+<arg>http://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<arg>remote_url=http://127.0.0.1:4444/wd/hub</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-25T15:09:06.655084" elapsed="0.828993"/>
+</kw>
+<status status="PASS" start="2025-03-25T15:09:06.653090" elapsed="0.831337"/>
+</kw>
+<kw name="Login Avec Cridentials Corrects">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${username} ${password}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-25T15:09:07.486653" elapsed="0.001039"/>
+</kw>
+<return>
+<value>${username}</value>
+<value>${password}</value>
+<status status="PASS" start="2025-03-25T15:09:07.487993" elapsed="0.000258"/>
+</return>
+<arg>username=standard_user</arg>
+<arg>password=secret_sauce</arg>
+<status status="PASS" start="2025-03-25T15:09:07.485485" elapsed="0.003252"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-25T15:09:07.489806" elapsed="0.085468"/>
+</kw>
+<tag>@regresssion</tag>
+<status status="PASS" start="2025-03-25T15:09:06.651922" elapsed="0.924201"/>
+</test>
+<test id="s1-t2" name="Case 2" line="10">
+<kw name="executer apres chaque test" type="SETUP">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>bye apres chaque test</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-25T15:09:07.581105" elapsed="0.000561"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-25T15:09:07.582555" level="INFO">Opening browser 'chrome' to base url 'http://www.saucedemo.com/' through remote server at 'http://127.0.0.1:4444/wd/hub'.</msg>
+<arg>http://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<arg>remote_url=http://127.0.0.1:4444/wd/hub</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-25T15:09:07.582080" elapsed="0.633475"/>
+</kw>
+<status status="PASS" start="2025-03-25T15:09:07.580731" elapsed="0.635054"/>
+</kw>
+<kw name="Login Avec Cridentials Corrects">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${username} ${password}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-25T15:09:08.217147" elapsed="0.000892"/>
+</kw>
+<return>
+<value>${username}</value>
+<value>${password}</value>
+<status status="PASS" start="2025-03-25T15:09:08.218306" elapsed="0.000190"/>
+</return>
+<arg>username=problem_user</arg>
+<arg>password=secret_sauce</arg>
+<status status="PASS" start="2025-03-25T15:09:08.216533" elapsed="0.002252"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-25T15:09:08.220007" elapsed="0.082762"/>
+</kw>
+<tag>@regresssion</tag>
+<status status="PASS" start="2025-03-25T15:09:07.578841" elapsed="0.725278"/>
+</test>
+<test id="s1-t3" name="Case 3" line="10">
+<kw name="executer apres chaque test" type="SETUP">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>bye apres chaque test</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-25T15:09:08.312710" elapsed="0.001669"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-25T15:09:08.316340" level="INFO">Opening browser 'chrome' to base url 'http://www.saucedemo.com/' through remote server at 'http://127.0.0.1:4444/wd/hub'.</msg>
+<arg>http://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<arg>remote_url=http://127.0.0.1:4444/wd/hub</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-25T15:09:08.315402" elapsed="0.626332"/>
+</kw>
+<status status="PASS" start="2025-03-25T15:09:08.311688" elapsed="0.630685"/>
+</kw>
+<kw name="Login Avec Cridentials Corrects">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${username} ${password}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-25T15:09:08.944960" elapsed="0.001548"/>
+</kw>
+<return>
+<value>${username}</value>
+<value>${password}</value>
+<status status="PASS" start="2025-03-25T15:09:08.946925" elapsed="0.000220"/>
+</return>
+<arg>username=visual_user</arg>
+<arg>password=secret_sauce</arg>
+<status status="PASS" start="2025-03-25T15:09:08.943924" elapsed="0.003780"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-25T15:09:08.949382" elapsed="0.132425"/>
+</kw>
+<tag>@regresssion</tag>
+<status status="PASS" start="2025-03-25T15:09:08.308554" elapsed="0.774187"/>
+</test>
+<status status="PASS" start="2025-03-25T15:09:06.268797" elapsed="2.816187"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">@regresssion</stat>
+</tag>
+<suite>
+<stat name="Login Avec Template Data" id="s1" pass="3" fail="0" skip="0">Login Avec Template Data</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-03-25T15:09:06.238456" level="WARN">Error in file 'c:\Users\zouzo\Desktop\project-selenium-robotframework\robotframework_saucedemo\tests\login_avec_template_data.robot' on line 17: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
