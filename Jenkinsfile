@@ -1,46 +1,28 @@
 pipeline {
     agent {
         docker {
-            image 'python:3.9-slim' 
-            label 'docker'
-            args '-v $PWD:$PWD'
+            image 'ppodgorsek/robot-framework'
         }
     }
 
     environment {
-        ROBOT_DIR = 'tests'
+        SELENIUM_GRID_URL = "http://192.168.1.22:4444"
     }
-
     stages {
-        stage('Install Dependencies') {
-            steps {
-                sh '''
-                pip install --upgrade pip
-                pip install robotframework
-                pip install robotframework-seleniumlibrary
-                '''
+        stage('Install python'){
+                steps {
+                sh'pip freeze > requirements.txt'
+                sh ' python3 -m pip install -r requirements.txt'
             }
         }
-
-        stage('Run Robot Framework Tests') {
+    
+    stage('Run Selenium Tests') {
             steps {
-                sh '''
-                robot $ROBOT_DIR
-                '''
+                // Exécution des tests avec Selenium
+                sh  'python3 -m robot tests/login_avec_template_data.robot'
             }
-        }
-
-        stage('Publish Test Results') {
-            steps {
-                junit '/output.xml'
-                archiveArtifacts artifacts: '/report.html', allowEmptyArchive: true
-            }
-        }
     }
-
-    post {
-        always {
-            cleanWs()
-        }
     }
+   
+
 }
