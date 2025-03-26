@@ -13,8 +13,11 @@ pipeline {
                 steps {
                 sh'pip freeze > requirements.txt'
                 //sh ' python3 -m pip install -r requirements.txt'
-                sh 'python3 -m venv venv'
-                sh 'source venv/bin/activate && pip install --no-cache-dir -r requirements.txt'
+                sh '''
+                python3 -m venv venv
+                .venv/Scripts/Activate.ps1 
+                pip install -r requirements.txt
+                '''
             }
         }
     
