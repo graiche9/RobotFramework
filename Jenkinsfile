@@ -24,7 +24,7 @@ pipeline {
     stage('Run Selenium Tests') {
             steps {
                 // Exécution des tests avec Selenium
-                sh  'python3 -m robot tests/login_avec_template_data.robot'
+                sh  'python -m robot tests/login_avec_template_data.robot'
             }
     }
     }
