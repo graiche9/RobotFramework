@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'ppodgorsek/robot-framework'
+            image 'python:3.9-slim'
         }
     }
 
@@ -23,6 +23,5 @@ pipeline {
             }
     }
     }
-   
 
 }
