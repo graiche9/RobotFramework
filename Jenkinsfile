@@ -24,7 +24,7 @@ pipeline {
         stage('Run Robot Framework Tests') {
             steps {
 
-                sh  'python -m robot tests/login_avec_template_data.robot'
+                sh  'python -m robot robotframework_saucedemo/tests/login_avec_template_data.robot'
             }
         }
 
